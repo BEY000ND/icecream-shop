@@ -164,15 +164,11 @@ header {
     background-color: var(--background-color);
     box-shadow: var(--shadow);
     padding: 1rem;
-    transform: translateY(-100%);
-    opacity: 0;
-    transition: var(--transition);
     z-index: 999;
 }
 
 .mobile-nav.active {
-    transform: translateY(0);
-    opacity: 1;
+    display: block;
 }
 
 .mobile-nav a {
@@ -649,6 +645,10 @@ footer {
     }
 
     .mobile-nav {
+        display: none;
+    }
+
+    .mobile-nav.active {
         display: block;
     }
 
