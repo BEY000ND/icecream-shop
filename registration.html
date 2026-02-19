@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Регистрация в магазине мороженого">
+    <title>Регистрация - Магазин мороженого</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <img src="favicon.ico" alt="Мороженое" style="width: 32px; height: 32px;">
+                <span>Мороженое</span>
+            </a>
+            
+            <!-- Desktop Navigation -->
+            <nav class="nav-menu">
+                <a href="index.html">Главная</a>
+                <a href="catalog.html">Каталог</a>
+                <a href="map.html">Адреса</a>
+                <a href="login.html">Вход</a>
+                <a href="registration.html" class="active">Регистрация</a>
+            </nav>
+
+            <!-- Burger Menu Button -->
+            <button class="burger-menu" aria-label="Открыть меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <nav class="mobile-nav">
+            <a href="index.html">Главная</a>
+            <a href="catalog.html">Каталог</a>
+            <a href="map.html">Адреса</a>
+            <a href="login.html">Вход</a>
+            <a href="registration.html" class="active">Регистрация</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <h1 class="page-title">Регистрация</h1>
+        
+        <div class="form-container">
+            <form id="registration-form">
+                <div class="form-group">
+                    <label for="name">Имя</label>
+                    <input type="text" id="name" name="name" placeholder="Введите ваше имя" required>
+                    <p class="error-message" id="name-error"></p>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="example@mail.ru" required>
+                    <p class="error-message" id="email-error"></p>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Пароль</label>
+                    <input type="password" id="password" name="password" placeholder="Минимум 6 символов" required>
+                    <p class="error-message" id="password-error"></p>
+                </div>
+                
+                <div class="form-group">
+                    <label for="confirm-password">Подтвердите пароль</label>
+                    <input type="password" id="confirm-password" name="confirm-password" placeholder="Повторите пароль" required>
+                    <p class="error-message" id="confirm-password-error"></p>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
+            </form>
+            
+            <p class="form-link">
+                Уже есть аккаунт? <a href="login.html">Войти</a>
+            </p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>Плюснин Илья Иванович, 2026</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

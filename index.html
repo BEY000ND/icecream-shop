@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Магазин мороженого - вкуснейшее мороженое с доставкой">
+    <title>Магазин мороженого</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <img src="favicon.ico" alt="Мороженое" style="width: 32px; height: 32px;">
+                <span>Мороженое</span>
+            </a>
+            
+            <!-- Desktop Navigation -->
+            <nav class="nav-menu">
+                <a href="index.html" class="active">Главная</a>
+                <a href="catalog.html">Каталог</a>
+                <a href="map.html">Адреса</a>
+                <a href="login.html">Вход</a>
+                <a href="registration.html">Регистрация</a>
+            </nav>
+
+            <!-- Burger Menu Button -->
+            <button class="burger-menu" aria-label="Открыть меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <nav class="mobile-nav">
+            <a href="index.html" class="active">Главная</a>
+            <a href="catalog.html">Каталог</a>
+            <a href="map.html">Адреса</a>
+            <a href="login.html">Вход</a>
+            <a href="registration.html">Регистрация</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="welcome-container" style="text-align: center; padding: 3rem 1rem;">
+            <h1 class="page-title">Добро пожаловать в магазин мороженого!</h1>
+            <p style="font-size: 1.2rem; color: #7F8C8D; margin-bottom: 2rem;">
+                Самое вкусное мороженое в Москве
+            </p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="login.html" class="btn btn-primary">Войти</a>
+                <a href="registration.html" class="btn btn-outline">Регистрация</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>Плюснин Илья Иванович, 2026</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

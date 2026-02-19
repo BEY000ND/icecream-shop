@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Адреса магазинов мороженого">
+    <title>Адреса - Магазин мороженого</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Yandex Maps API (free tier, no key required for basic usage) -->
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <img src="favicon.ico" alt="Мороженое" style="width: 32px; height: 32px;">
+                <span>Мороженое</span>
+            </a>
+            
+            <!-- Desktop Navigation -->
+            <nav class="nav-menu">
+                <a href="index.html">Главная</a>
+                <a href="catalog.html">Каталог</a>
+                <a href="map.html" class="active">Адреса</a>
+                <a href="login.html">Вход</a>
+                <a href="registration.html">Регистрация</a>
+            </nav>
+
+            <!-- Burger Menu Button -->
+            <button class="burger-menu" aria-label="Открыть меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <nav class="mobile-nav">
+            <a href="index.html">Главная</a>
+            <a href="catalog.html">Каталог</a>
+            <a href="map.html" class="active">Адреса</a>
+            <a href="login.html">Вход</a>
+            <a href="registration.html">Регистрация</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <h1 class="page-title">Наш адрес</h1>
+        
+        <!-- Map Container -->
+        <div id="map" class="map-container">
+            <!-- Yandex Map will be rendered here -->
+        </div>
+
+        <!-- Address Information -->
+        <div class="address-info">
+            <h3>
+                <span>📍</span>
+                <span>Магазин мороженого</span>
+            </h3>
+            <p><strong>Адрес:</strong> Москва, проспект Вернадского 78, строение 4, 119454</p>
+            <p><strong>Режим работы:</strong> Ежедневно с 10:00 до 22:00</p>
+            <p><strong>Телефон:</strong> +7 (495) 123-45-67</p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>Плюснин Илья Иванович, 2026</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Initialize Yandex Map
+        ymaps.ready(function() {
+            // Coordinates for Moscow, Vernadsky Avenue 78, building 4
+            var coordinates = [55.669980, 37.480400];
+            
+            var map = new ymaps.Map('map', {
+                center: coordinates,
+                zoom: 16,
+                controls: ['zoomControl', 'fullscreenControl']
+            });
+
+            var placemark = new ymaps.Placemark(coordinates, {
+                balloonContent: '<div style="padding: 10px;"><strong>Магазин мороженого</strong><br>Москва, проспект Вернадского 78,<br>строение 4, 119454</div>',
+                hintContent: 'Магазин мороженого'
+            }, {
+                preset: 'islands#redFoodIcon'
+            });
+
+            map.geoObjects.add(placemark);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Каталог мороженого - выберите любимые вкусы">
+    <title>Каталог - Магазин мороженого</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <img src="favicon.ico" alt="Мороженое" style="width: 32px; height: 32px;">
+                <span>Мороженое</span>
+            </a>
+            
+            <!-- Desktop Navigation -->
+            <nav class="nav-menu">
+                <a href="index.html">Главная</a>
+                <a href="catalog.html" class="active">Каталог</a>
+                <a href="map.html">Адреса</a>
+                <a href="login.html">Вход</a>
+                <a href="registration.html">Регистрация</a>
+            </nav>
+
+            <!-- Burger Menu Button -->
+            <button class="burger-menu" aria-label="Открыть меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <nav class="mobile-nav">
+            <a href="index.html">Главная</a>
+            <a href="catalog.html" class="active">Каталог</a>
+            <a href="map.html">Адреса</a>
+            <a href="login.html">Вход</a>
+            <a href="registration.html">Регистрация</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <h1 class="page-title">Каталог мороженого</h1>
+        
+        <div class="catalog-container">
+            <!-- Products Section -->
+            <section class="products-section">
+                <h2 style="margin-bottom: 1rem; color: #7F8C8D;">Выберите мороженое</h2>
+                <div class="products-grid">
+                    <!-- Products will be rendered by JavaScript -->
+                </div>
+            </section>
+
+            <!-- Cart Section -->
+            <aside class="cart-section">
+                <h2 class="cart-title">
+                    <span>🛒</span>
+                    <span>Корзина</span>
+                </h2>
+                
+                <div class="cart-drop-zone">
+                    <p>Перетащите сюда мороженое</p>
+                </div>
+                
+                <div class="cart-items">
+                    <p class="cart-empty">Корзина пуста</p>
+                </div>
+                
+                <div class="cart-total">
+                    <span>Итого:</span>
+                    <span class="cart-total-price">0 ₽</span>
+                </div>
+                
+                <div class="cart-actions">
+                    <button class="btn btn-outline clear-cart-btn">Очистить</button>
+                    <button class="btn btn-primary checkout-btn">Оформить</button>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>Плюснин Илья Иванович, 2026</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

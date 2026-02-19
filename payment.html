@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Оформление заказа - Магазин мороженого">
+    <title>Оформление заказа - Магазин мороженого</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <img src="favicon.ico" alt="Мороженое" style="width: 32px; height: 32px;">
+                <span>Мороженое</span>
+            </a>
+            
+            <!-- Desktop Navigation -->
+            <nav class="nav-menu">
+                <a href="index.html">Главная</a>
+                <a href="catalog.html">Каталог</a>
+                <a href="map.html">Адреса</a>
+                <a href="login.html">Вход</a>
+                <a href="registration.html">Регистрация</a>
+            </nav>
+
+            <!-- Burger Menu Button -->
+            <button class="burger-menu" aria-label="Открыть меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <nav class="mobile-nav">
+            <a href="index.html">Главная</a>
+            <a href="catalog.html">Каталог</a>
+            <a href="map.html">Адреса</a>
+            <a href="login.html">Вход</a>
+            <a href="registration.html">Регистрация</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <h1 class="page-title">Оформление заказа</h1>
+        
+        <div class="payment-container">
+            <!-- Order Summary -->
+            <div class="order-summary">
+                <h3>📋 Ваш заказ</h3>
+                <div class="order-items">
+                    <!-- Items will be rendered by JavaScript -->
+                </div>
+                <div class="order-total">
+                    <span>Итого:</span>
+                    <span class="order-total-price"></span>
+                </div>
+            </div>
+
+            <!-- Confirmation Message (hidden by default) -->
+            <div class="confirmation-message hidden">
+                <div class="confirmation-icon">✅</div>
+                <h2>Заказ подтверждён!</h2>
+                <p>Спасибо за покупку! Ваше мороженое скоро будет готово.</p>
+                <a href="catalog.html" class="btn btn-primary">Вернуться в каталог</a>
+            </div>
+
+            <!-- Confirm Button -->
+            <button class="btn btn-primary confirm-btn" style="width: 100%; margin-top: 1.5rem;">
+                Подтвердить заказ
+            </button>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>Плюснин Илья Иванович, 2026</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
