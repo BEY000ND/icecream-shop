@@ -165,10 +165,12 @@ header {
     box-shadow: var(--shadow);
     padding: 1rem;
     z-index: 999;
+    pointer-events: none;
 }
 
 .mobile-nav.active {
     display: block;
+    pointer-events: auto;
 }
 
 .mobile-nav a {

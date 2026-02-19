@@ -21,11 +21,16 @@ document.addEventListener('DOMContentLoaded', function() {
     const mobileNav = document.querySelector('.mobile-nav');
 
     if (burgerMenu && mobileNav) {
-        // Toggle mobile menu
-        burgerMenu.addEventListener('click', function() {
-            this.classList.toggle('active');
+        // Toggle mobile menu - handle both click and touch
+        function toggleMenu(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            burgerMenu.classList.toggle('active');
             mobileNav.classList.toggle('active');
-        });
+        }
+
+        burgerMenu.addEventListener('click', toggleMenu);
+        burgerMenu.addEventListener('touchstart', toggleMenu, { passive: false });
 
         // Close menu when clicking on a link
         const mobileLinks = mobileNav.querySelectorAll('a');
